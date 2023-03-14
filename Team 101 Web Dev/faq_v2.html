@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Park Information</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="css/faq_v2.css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+        <script src="js/index.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="inner-width">
+                <a href="index.html" class="logo"></a>
+                <button class="menu-toggler">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="navbar-menu">
+                    <a href="index.html">Home</a>
+                    <a href="promotions.html">Promotions</a>
+                    <a href="faq_v2.html">FAQ & Location</a>
+                </div>
+            </div>
+        </nav>
+
+        <!--Right container-->
+        <div class="grid-container">
+
+            <div class="faq">
+                <div class="header2">
+                    <h2>Frequently Asked Questions (FAQ)</h2>
+                </div>
+
+                <button class="accordion">How do I get the tickets to the park?</button>
+                <div class="panel">
+                <p>Please head to the "Promotions" page.</p>
+                </div>
+
+                <button class="accordion">Is the park kid-friendly?</button>
+                <div class="panel">
+                <p>Yes, absolutely. There are kid-friendly rides.</p>
+                <p>Kid-friendly rides are available for children under 7.</p>
+                </div>
+
+                <button class="accordion">Are there lockers available for rent?</button>
+                <div class="panel">
+                <p>Yes, there are locker rooms at the entrance of the park.</p>
+                </div>
+
+                <button class="accordion">Are there rent services for stroller/ wheelchair?</button>
+                <div class="panel">
+                    <p>Yes. Please head to our service counter at the check in.</p>
+                    </div>
+
+                <button class="accordion">Can I wear swimsuit on the rides?</button>
+                <div class="panel">
+                    <p>No, you may only change to your swimsuit at the pool.</p>
+                    </div>
+
+                <button class="accordion">Are there any COVID-19 precautions taken?</button>
+                <div class="panel">
+                    <p>Yes, definitely. We are following state's guidelines.</p>
+                    <p>The park aim to provide park-goers a wholesome experience!</p>
+                    </div>
+
+                <button class="accordion">Are cats/dogs allowed in the park?</button>
+                <div class="panel">
+                    <p>Yes. Please ensure that they are leashed at all times.</p>
+                    </div>
+
+                <button class="accordion">I have more questions, where can I ask them?</button>
+                <div class="panel">
+                    <p>Please click <a class="skip-content" href="#contact">here</a> and fill in the required fields.</p>
+                    <p>We will get in touch with you shortly.</p>
+                    </div>  
+
+            </div>
+
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                
+                for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                    } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                    } 
+                });
+        }
+            </script>
+
+            <div class="blank"></div>
+
+            <!--Left Container-->
+
+            <div class="location">
+                <div class="header1">
+                    <h2>How To Get Here</h2>
+                </div>
+
+            <dl>
+                <dt><strong class="strong">Bus:</strong></dt>
+
+                     <dd>You may take bus <strong><i>123, 345, 789</i></strong> and drop at Queens's street stop and you 
+                        will reach the park's entrance.</dd>
+
+                        <br>
+
+                <dt><strong class="strong">Car:</strong></dt>
+
+                    <dd>Drive in from Queen's street to reach our drive through to check in then head towards car park</dd>
+                    
+                        <br>
+
+                <dt><strong class="strong">Shuttle Bus:</strong></dt>
+                 <!--can include more information on shuttle bus arrival timings-->
+                    <dd>You may take the shuttle bus from <strong><i>Avenue 4</i></strong> to directly reach the park</dd>
+
+            </dl>
+                    
+                <br>
+
+                <div class="subheader">
+                    <h2>Opening Hours</h2>
+                </div>
+
+                <!--Containers consisting of Days and Timings-->
+                <div class="grid-container2">
+
+                    <div class="days">
+                        <p>
+                            <br>Monday
+                            <br>Tuesday
+                            <br>Wednesday
+                            <br>Thursday
+                            <br>Friday
+                            <br>Saturday
+                            <br>Sunday
+                    </p>
+
+                    </div>
+                    <div class="timings">
+                        <p>
+                            <br>
+                            8:00am - 8.00pm
+                            <br>
+                            8:00am - 8.00pm
+                            <br>
+                            8:00am - 8.00pm
+                            <br>
+                            8:00am - 8.00pm
+                            <br>
+                            8:00am - 8.00pm
+                            <br>
+                            8:00am - 10.00pm
+                            <br>
+                            8:00am - 10.00pm
+                        </p>
+                        
+    
+
+                    </div>
+                </div>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15955.058380877887!2d103.90279944999999!3d1.3168439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ssg!4v1669807732738!5m2!1sen!2ssg" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"> 
+                </iframe>
+                
+
+            </dl>
+                
+            </div>
+
+
+        </div>
+
+        <section id="contact">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <h3>Feel Free To Ask Us Anything!</h3>
+            <form action="action_page.php">
+
+                <label for="fullname">Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Your Full Name">
+
+                <label for="phonenumber">Phone Number</label>
+                <input type="text" id="phonenumber" name="phonenumber" placeholder="Phone Number">
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Your Email">
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="State Your Enquiry" style="height: 200px;"></textarea>
+
+                <input type="submit" value="Submit">
+
+            </form>
+        </div>
+    </section>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="index.html">About Us</a></li>
+                            <li><a href="index.html">Mission & Vision</a></li>
+                            <li><a href="#">milestones</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>promotions</h4>
+                        <ul>
+                            <li><a href="promotions.html">Single Savers</a></li>
+                            <li><a href="promotions.html">Duo Discounts</a></li>
+                            <li><a href="promotions.html">Family Funtastic</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>faq & location</h4>
+                        <ul>
+                            <li><a href="faq_v2.html">How To Get Here</a></li>
+                            <li><a href="faq_v2.html">Enquiries</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>socials</h4>
+                        <div class="sm"> <!-- sm = Social Media -->
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin-in"></a>
+                            <a href="#" class="fab fa-youtube"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Mailing List -->
+        <div class="mailing-list">
+            <form>
+                <h4>Join Our Rêver Club</h4>
+                <p>By joining our Rêver Club, you will have the priviledge to enjoy members-only discounts, as well as limited-time deals all year round! Joining is simple with just your email.</p>
+                <div class="email-box">
+                    <i class="fas fa-envelope"></i>
+                    <input class="tbox" type="email" placeholder="Enter Your Email!">
+                    <button class="btn" type="button" name="button">Subscribe</button>
+                </div>
+            </form>
+        </div>
+
+    </body>
+</html>

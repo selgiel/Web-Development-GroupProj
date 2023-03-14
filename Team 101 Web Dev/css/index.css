@@ -1,0 +1,466 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Ubuntu",sans-serif;
+    box-sizing: border-box;
+}
+/* Navbar CSS */
+.navbar{
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    padding: 30px 0;
+    top: 0;
+    z-index: 999;
+    transition: 0.3s linear;
+}
+
+.inner-width{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+}
+
+.navbar .inner-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 65px;
+    height: 65px;
+    background-image: url(../images/indeximages/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Hamburger Button */
+.menu-toggler{
+    background: none;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    z-index: 999;
+    display: none;
+}
+
+/* Lines in the Hamburger Menu */
+.menu-toggler span{
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    position: relative;
+    transition: 0.3s linear;
+}
+
+.navbar-menu a{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: 0.2s linear;
+}
+
+/* Navbar text hover color change */
+.navbar-menu a:hover{
+    color: rgb(234, 205, 41) !important;
+}
+
+/* Start of Navbar "Sticky" Class CSS */
+.sticky{
+    background-color: black;
+    padding: 18px 0;
+}
+
+.sticky .logo{
+    background-image: url(../images/indeximages/logo-gold.png);
+}
+
+.sticky .navbar-menu a{
+    color: gold;
+}
+
+.sticky .menu-toggler span{
+    background-color: gold;
+}
+/* End of Navbar "Sticky" Class CSS */
+
+/* START of Homepage First Section CSS */
+#home{
+    height: 100vh;
+    min-height: 500px;
+    background: url(../images/indeximages/bg.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#home .inner-width{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+#home .content{
+    width: 100%;
+    color: #fff;
+}
+
+#home .content h1{
+    font-size: 60px;
+    margin-bottom: 60px;
+}
+
+#home .content h1::after{
+    content: "Rêver";
+    color: rgb(234, 205, 41);
+    animation: textanim 10s linear infinite;
+    text-decoration: underline;
+}
+
+/* Changing Text in the homepage */
+@keyframes textanim{
+    25%{
+        content: "A Dreamland";
+    }
+    50%{
+        content: "A Paradise";
+    }
+    75%{
+        content: "An Experience";
+    }
+}
+
+.sm a{
+    color: #fff;
+    font-size: 22px;
+    margin: 0 10px;
+    transition: 0.2s linear;
+}
+
+.sm a:hover{
+    color: rgb(234, 205, 41);
+}
+
+#home .buttons{
+    margin-top: 60px;
+}
+
+#home .buttons a{
+    display: inline-block;
+    margin: 15px 30px;
+    color: yellow;
+    font-size: 15px;
+    font-weight: 500;
+    width: 180px;
+    border: 1px solid;
+    padding: 14px 0;
+    border-radius: 6px;
+    transition: 0.2s linear;
+}
+
+#home .buttons a:hover{
+    background-color: rgb(234, 205, 41);
+}
+/* END of First Section CSS */
+
+/* START of Second Section CSS */
+#home2{
+    height: auto;
+    background: url(../images/indeximages/home2bg.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+#home2 .column{
+    float: left;
+    width: 50%;
+    height: fit-content;
+}
+
+#home2 .row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#home2 .column p{
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    margin: 10%;
+    margin-top: 40%;
+    font-size: 20px;
+    letter-spacing: .1em;
+}
+
+#home2 .column img{
+    width: 100%;
+    height: auto;
+}
+/* END of Second Section CSS */
+
+/* START of Third Section CSS */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: transparent;
+    color: yellow;
+    padding: 12px 20px;
+    border: 1px solid yellow;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(234, 205, 41);
+}
+
+#contact .container h1, h3 {
+    text-align: center;
+    color: rgb(234, 205, 41);
+    font-weight: 700 bolder;
+    padding: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#contact .container h1{
+    font-size: 60px;
+}
+
+#contact .container h3{
+    font-size: 30px;
+}
+
+#contact .container label{
+    color: rgb(234, 205, 41);
+}
+
+#contact .container {
+    background: url(../images/indeximages/contactbg.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px;
+    padding-left: 25%;
+    padding-right: 25%;
+    min-height: auto;
+}
+/* End of Third Section CSS */
+
+/* START of Footer CSS */
+.footer {
+    background-color: black;
+    padding: 70px 0;
+}
+
+.footer .container{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.footer .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: gold;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 300;
+    color: white;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: rgb(234, 205, 41);
+    padding-left: 8px;
+}
+
+.footer-col .sm a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #bbb;
+    margin: 0 5px 5px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.footer-col .sm a:hover{
+    color: black;
+    background-color: gold;
+}
+/* END of Footer CSS */
+
+/* START of Mailing List CSS */
+.mailing-list{
+    padding: 100px 40px;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+.mailing-list p{
+    max-width: auto;
+    margin: 40px auto;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.email-box{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.email-box i{
+    background: rgb(234, 205, 41);
+    color: black;
+    width: 40px;
+    line-height: 40px;
+}
+
+.tbox, .btn{
+    border: none;
+    outline: none;
+}
+
+.tbox{
+    width: 260px;
+    padding: 0 10px;
+    border: 1px rgb(234, 205, 41) solid;
+}
+
+.btn{
+    background: rgb(234, 205, 41);
+    color: black;
+    padding: 0 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+/* END of Mailing List CSS */
+
+/* Responsive CSS for screen size */
+@media screen and (max-width: 1100px){
+    .menu-toggler{
+        display: block;
+    }
+
+    .navbar-menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: #353b48;
+        top: 0;
+        right: -100%;
+        max-width: 400px;
+        padding: 80px 50px;
+        transition: 0.3s linear;
+    }
+
+    .navbar-menu a{
+        display: block;
+        font-size: 30px;
+        margin: 30px 0;
+    }
+
+    
+    .sticky .navbar-menu{
+        background-color: black;
+    }
+
+    .navbar-menu.active{
+        right: 0;
+    }
+
+    .menu-toggler.active span:nth-child(1){
+        transform: rotate(-45deg);
+        top: 4px;
+    }
+
+    .menu-toggler.active span:nth-child(2){
+        opacity: 0;
+    }
+
+    .menu-toggler.active span:nth-child(3){
+        transform: rotate(45deg);
+        bottom: 14px;
+    }
+
+    #home2 .column{
+        width: 100%;
+        min-height: fit-content;
+    }
+
+    #contact{
+        width: 100%;
+        min-height: fit-content;
+    }
+
+    .footer-col{
+        width: 100%;
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+
+    .mailing-list{
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,455 @@
+:root{ /*variables for*/
+    --text-light: rgba(255,255,255,0.6);
+    --text-lighter: rgba(255,255,255,0.9);
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 30px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 64px;
+    --width-container: 1200px;
+  }
+  
+  *{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  html{
+    height: 100%;
+    font-family: "Ubuntu",sans-serif;
+    font-size: 17px;
+  }
+  
+  body{
+    height: 100%;
+  }
+  
+  .hero-section{
+    align-items: flex-start;
+    background-image: linear-gradient(75deg, #c4688b 0%, #3835e0 150%);
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    padding: var(--spacing-xxl) var(--spacing-l);
+    
+  }
+  
+  .card-grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: var(--spacing-l);
+    grid-row-gap: var(--spacing-l);
+    max-width: var(--width-container);
+    width: 100%;
+    margin-top: 50px;
+  }
+  
+  @media(min-width: 540px){
+    .card-grid{
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  
+  @media(min-width: 960px){
+    .card-grid{
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  }
+  
+  .card{
+    list-style: none;
+    position: relative;
+  }
+  
+  .card:before{
+    content: '';
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
+  }
+  
+  .card__background{
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--spacing-l);
+    bottom: 0;
+    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center;
+    transform: scale(1);
+    transition: 
+      filter 200ms linear,
+      transform 200ms linear;
+  }
+  
+  .card:hover .card__background{
+    transform: scale(1.05);
+  }
+  
+  .card-grid:hover > .card:not(:hover) .card__background{
+    filter: brightness(0.4) saturate(15%) contrast(125%) blur(2px);
+  }
+  
+  .card__content{
+    left: 0;
+    padding: var(--spacing-l);
+    position: absolute;
+    top: 0;
+  }
+  
+  .card__category{
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-s);
+    text-transform: uppercase;
+  }
+  
+  .card__heading {
+    color: var(--text-lighter);
+    font-size: 1.9rem;
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+    line-height: 1.4;
+    word-spacing: 100vw
+  }
+  /* Navbar CSS */
+  .navbar{
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    padding: 30px 0;
+    top: 0;
+    z-index: 999;
+    transition: 0.3s linear;
+  }
+
+  .inner-width{
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+  }
+
+  .navbar .inner-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo{
+    width: 65px;
+    height: 65px;
+    background-image: url(../images/indeximages/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  /* Hamburger Button */
+  .menu-toggler{
+    background: none;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    z-index: 999;
+    display: none;
+  }
+
+  /* Lines in the Hamburger Menu */
+  .menu-toggler span{
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    position: relative;
+    transition: 0.3s linear;
+  }
+
+  .navbar-menu a{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: 0.2s linear;
+  }
+
+  /* Navbar text hover color change */
+  .navbar-menu a:hover{
+    color: rgb(234, 205, 41) !important;
+  }
+
+  /* Start of Navbar "Sticky" Class CSS */
+  .sticky{
+    background-color: black;
+    padding: 18px 0;
+  }
+
+  .sticky .logo{
+    background-image: url(../images/indeximages/logo-gold.png);
+  }
+
+  .sticky .navbar-menu a{
+    color: gold;
+  }
+
+  .sticky .menu-toggler span{
+    background-color: gold;
+  }
+  /* End of Navbar "Sticky" Class CSS */
+
+  /* START of Third Section CSS */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  input[type=submit] {
+    background-color: transparent;
+    color: yellow;
+    padding: 12px 20px;
+    border: 1px solid yellow;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s linear;
+  }
+
+  input[type=submit]:hover {
+    background-color: rgb(234, 205, 41);
+  }
+
+  #contact .container h1, h3 {
+    text-align: center;
+    color: rgb(234, 205, 41);
+    font-weight: 700 bolder;
+    padding: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  #contact .container h1{
+    font-size: 60px;
+  }
+
+  #contact .container h3{
+    font-size: 30px;
+  }
+
+  #contact .container label{
+    color: rgb(234, 205, 41);
+  }
+
+  #contact .container {
+    background: url(../images/indeximages/contactbg.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px;
+    padding-left: 25%;
+    padding-right: 25%;
+    min-height: auto;
+  }
+  /* End of Third Section CSS */
+
+  /* START of Footer CSS */
+  .footer {
+    background-color: black;
+    padding: 70px 0;
+  }
+
+  .footer .container{
+    max-width: 1170px;
+    margin: auto;
+  }
+
+  .footer ul{
+    list-style: none;
+  }
+
+  .footer .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footer-col{
+    width: 25%;
+    padding: 0 15px;
+  }
+
+  .footer-col h4{
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: gold;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 300;
+    color: white;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  .footer-col ul li a:hover{
+    color: rgb(234, 205, 41);
+    padding-left: 8px;
+  }
+
+  .footer-col .sm a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #bbb;
+    margin: 0 5px 5px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: black;
+    transition: all 0.3s ease;
+  }
+
+  .footer-col .sm a:hover{
+    color: black;
+    background-color: gold;
+  }
+  /* END of Footer CSS */
+
+  /* START of Mailing List CSS */
+  .mailing-list{
+    padding: 100px 40px;
+    text-align: center;
+    color: white;
+    background-color: black;
+  }
+
+  .mailing-list p{
+    max-width: auto;
+    margin: 40px auto;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .email-box{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .email-box i{
+    background: rgb(234, 205, 41);
+    color: black;
+    width: 40px;
+    line-height: 40px;
+  }
+
+  .tbox, .btn{
+    border: none;
+    outline: none;
+  }
+
+  .tbox{
+    width: 260px;
+    padding: 0 10px;
+    border: 1px rgb(234, 205, 41) solid;
+  }
+
+  .btn{
+    background: rgb(234, 205, 41);
+    color: black;
+    padding: 0 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  /* END of Mailing List CSS */
+
+  /* Responsive CSS for screen size */
+  @media screen and (max-width: 1100px){
+    .menu-toggler{
+        display: block;
+    }
+
+  .navbar-menu{
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      background-color: #353b48;
+      top: 0;
+      right: -100%;
+      max-width: 400px;
+      padding: 80px 50px;
+      transition: 0.3s linear;
+  }
+
+  .navbar-menu a{
+      display: block;
+      font-size: 30px;
+      margin: 30px 0;
+  }
+
+  
+  .sticky .navbar-menu{
+      background-color: black;
+  }
+
+  .navbar-menu.active{
+      right: 0;
+  }
+
+  .menu-toggler.active span:nth-child(1){
+      transform: rotate(-45deg);
+      top: 4px;
+  }
+
+  .menu-toggler.active span:nth-child(2){
+      opacity: 0;
+  }
+
+  .menu-toggler.active span:nth-child(3){
+      transform: rotate(45deg);
+      bottom: 14px;
+  }
+
+  #contact{
+      width: 100%;
+      min-height: fit-content;
+  }
+
+  .footer-col{
+      width: 100%;
+      margin-bottom: 30px;
+      justify-content: center;
+  }
+
+  .mailing-list{
+      width: 100%;
+  }
+}
